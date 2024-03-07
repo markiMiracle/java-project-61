@@ -70,7 +70,6 @@ public class Engine {
             System.out.println("'" + Engine.input + "' is wrong answer ;(. "
                     + "Correct answer was " + "'" + Engine.expect + "'" + ".\nLet's try again, " + Cli.name + ".");
             Engine.index = false;
-            gameChoosing();
         }
     }
 
@@ -80,11 +79,10 @@ public class Engine {
         }  else if (Engine.input2.equals("yes")) {
             System.out.println("'yes' is wrong answer ;(. "
                     + "Correct answer was 'no'.\nLet's try again, " + Cli.name + ".");
-            Engine.gameChoosing();
             Engine.index = false;
         } else {
-            System.out.println("'yes' is wrong answer ;(. "
-                    + "Correct answer was 'no'.\nLet's try again, " + Cli.name + ".");
+            System.out.println("'no' is wrong answer ;(. "
+                    + "Correct answer was 'yes'.\nLet's try again, " + Cli.name + ".");
             Engine.index = false;
         }
     }
