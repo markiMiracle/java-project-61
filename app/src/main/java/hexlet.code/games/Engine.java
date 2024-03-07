@@ -18,6 +18,7 @@ public class Engine {
         Scanner sc = new Scanner(System.in);
         var numOfTheGame = sc.nextInt();
         System.out.println("Your choice: " + numOfTheGame);
+        Cli.greeting();
         if (numOfTheGame == 2) {
             System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         } else if (numOfTheGame == 3) {
@@ -30,7 +31,7 @@ public class Engine {
             System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no', " + Cli.name);
         }
         for (var i = 0; i < 3; i++) {
-            if (!index) {
+            if (!index || numOfTheGame == 1) {
                 break;
             }
             if (numOfTheGame == 1) {
@@ -51,7 +52,7 @@ public class Engine {
                 break;
             }
         }
-        if (index) {
+        if (index && numOfTheGame != 1) {
             System.out.println("Congratulations, " + Cli.name + "!");
             index = false;
         }
@@ -84,7 +85,6 @@ public class Engine {
         } else {
             System.out.println("'yes' is wrong answer ;(. "
                     + "Correct answer was 'no'.\nLet's try again, " + Cli.name + ".");
-            Engine.gameChoosing();
             Engine.index = false;
         }
     }
