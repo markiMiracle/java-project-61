@@ -19,6 +19,9 @@ public class Engine {
         var numOfTheGame = sc.nextInt();
         System.out.println("Your choice: " + numOfTheGame);
         Cli.greeting();
+        if (numOfTheGame != 1) {
+            System.out.println("Welcome to the Brain Games!");
+        }
         if (numOfTheGame == 2) {
             System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         } else if (numOfTheGame == 3) {
