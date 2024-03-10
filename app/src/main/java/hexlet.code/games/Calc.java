@@ -1,5 +1,8 @@
 package hexlet.code.games;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class Calc {
     public static void calc() {
@@ -24,7 +27,7 @@ public class Calc {
             question = oper1 + " + " + oper2;
             answer = Integer.toString(oper1 + oper2);
         } else if (numOfOper == 2) {
-            question = question = oper1 + " - " + oper2;
+            question = oper1 + " - " + oper2;
             answer = Integer.toString(oper1 - oper2);
         } else {
             question = oper1 + " * " + oper2;

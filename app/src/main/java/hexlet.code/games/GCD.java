@@ -1,16 +1,24 @@
 package hexlet.code.games;
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.Scanner;
 public class GCD {
     public static void gcd() {
+        var startMess = "Find the greatest common divisor of given numbers.";
+        var questions = new ArrayList<String>();
+        var answers = new ArrayList<String>();
         Random random = new Random();
-        int firstNum = random.nextInt(1, 101);
-        int secondNum = random.nextInt(1, 101);
+        for (var i = 0; i < 3; i++) {
+            int firstNum = random.nextInt(1, 101);
+            int secondNum = random.nextInt(1, 101);
+            questions.add(firstNum + " " + secondNum);
+            answers.add(Integer.toString(getDel(firstNum, secondNum)));
+        }
+        Engine.gameStart(startMess, questions, answers);
+    }
+    public static Integer getDel(int firstNum, int secondNum) {
         var listOfDel1 = new ArrayList<Integer>();
         var listOfDel2 = new ArrayList<Integer>();
-        var expect = 0;
-        System.out.println("Question: " + firstNum + " " + secondNum);
+        int del = 1;
         for (var i = 1; i <= firstNum; i++) {
             if (firstNum % i == 0) {
                 listOfDel1.add(i);
@@ -23,13 +31,10 @@ public class GCD {
         }
         for (var i = listOfDel1.size() - 1; i >= 0; i--) {
             if (listOfDel2.contains(listOfDel1.get(i))) {
-                expect = listOfDel1.get(i);
+                del = listOfDel1.get(i);
                 break;
             }
         }
-        Scanner sc = new Scanner(System.in);
-        Engine.input = sc.nextInt();
-        System.out.println("Your answer: " + Engine.input);
-        Engine.answer();
+        return del;
     }
 }

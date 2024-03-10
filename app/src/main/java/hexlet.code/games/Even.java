@@ -1,6 +1,6 @@
 package hexlet.code.games;
+
 import java.util.List;
-import java.util.Scanner;
 public class Even {
     public static void even() {
         var startMess = "Answer 'yes' if the number is even, otherwise answer 'no'.";
