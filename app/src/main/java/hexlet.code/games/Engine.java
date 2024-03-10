@@ -1,7 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
-
 import java.util.List;
 import java.util.Scanner;
 
@@ -18,14 +16,15 @@ public class Engine {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + input + "' is wrong answer ;(. "
-                        + "Correct answer was " + "'" + answers.get(i) + "'.\nLet's try again, " + Cli.name + ".");
+                        + "Correct answer was " + "'" + answers.get(i) + "'.\nLet's try again, " + Greet.name + ".");
                 index = false;
                 break;
             }
         }
         if (index) {
-            System.out.println("Congratulations, " + Cli.name + "!");
+            System.out.println("Congratulations, " + Greet.name + "!");
         }
+        sq.close();
     }
 
     public static Boolean answer(String ans, String correctAns) {

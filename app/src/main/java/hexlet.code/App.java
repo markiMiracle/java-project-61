@@ -1,10 +1,11 @@
 package hexlet.code;
 
-import hexlet.code.games.Progression;
 import hexlet.code.games.GCD;
-import hexlet.code.games.Even;
+import hexlet.code.games.Greet;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Even;
 
 import java.util.Scanner;
 
@@ -17,21 +18,21 @@ public class App {
         var numOfTheGame = sc.nextInt();
         System.out.println("Your choice: " + numOfTheGame + "\n");
         if (numOfTheGame == 1) {
-            Cli.greeting();
+            Greet.greet();
         } else if (numOfTheGame == 2) {
-            Cli.greeting();
+            Greet.greet();
             Even.even();
         } else if (numOfTheGame == 3) {
-            Cli.greeting();
+            Greet.greet();
             Calc.calc();
         } else if (numOfTheGame == 4) {
-            Cli.greeting();
+            Greet.greet();
             GCD.gcd();
         } else if (numOfTheGame == 5) {
-            Cli.greeting();
+            Greet.greet();
             Progression.progression();
         } else if (numOfTheGame == 6) {
-            Cli.greeting();
+            Greet.greet();
             Prime.prime();
         } else {
             System.out.println("Leave the game...");
