@@ -1,35 +1,32 @@
 package hexlet.code.games;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class Progression {
     public static void progression() {
         var startMess = "What number is missing in the progression?";
         var random = new Random();
-        var questions = new ArrayList<String>();
-        var answers = new ArrayList<String>();
-        for (var i = 0; i < 3; i++) {
+        var gameData = new ArrayList<String>();
+        for (var i = 0; i < Engine.ROUNDS; i++) {
             var startOfProg = random.nextInt(100);
             var stepOfProg = random.nextInt(1, 11);
             var hidden = random.nextInt(1, 11);
-            questions.add(getProg(startOfProg, stepOfProg, hidden).get(0));
-            answers.add(getProg(startOfProg, stepOfProg, hidden).get(1));
+            var prog = getProg(startOfProg, stepOfProg);
+            var answer = prog[hidden];
+            prog[hidden] = "...";
+            String finalProg = String.join(" ", prog);
+            gameData.add(finalProg + "_" + answer);
         }
-        Engine.gameStart(startMess, questions, answers);
+        Engine.gameStart(startMess, gameData);
     }
-    public static List<String> getProg(int startOfProg, int stepOfProg, int hidden) {
-        var prog = startOfProg + "";
-        var answer = "";
-        for (var i = 1; i < 11; i++) {
+    public static String[] getProg(int startOfProg, int stepOfProg) {
+        String[] prog = new String[10];
+        prog[0] = Integer.toString(startOfProg);
+        String answer = "";
+        for (var i = 1; i < 10; i++) {
             startOfProg += stepOfProg;
-            if (i == hidden) {
-                prog += " ...";
-                answer = Integer.toString(startOfProg);
-            } else {
-                prog += " " + startOfProg;
-            }
+            prog[i] = Integer.toString(startOfProg);
         }
-        return List.of(prog, answer);
+        return prog;
     }
 }

@@ -1,7 +1,6 @@
 package hexlet.code;
 
 import hexlet.code.games.GCD;
-import hexlet.code.games.Greet;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
@@ -10,6 +9,7 @@ import hexlet.code.games.Even;
 import java.util.Scanner;
 
 public class App {
+    public static String name;
 
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.\n1 - Greet\n2 - Even\n"
@@ -18,24 +18,32 @@ public class App {
         var numOfTheGame = sc.nextInt();
         System.out.println("Your choice: " + numOfTheGame + "\n");
         if (numOfTheGame == 1) {
-            Greet.greet();
+            greet();
         } else if (numOfTheGame == 2) {
-            Greet.greet();
+            greet();
             Even.even();
         } else if (numOfTheGame == 3) {
-            Greet.greet();
+            greet();
             Calc.calc();
         } else if (numOfTheGame == 4) {
-            Greet.greet();
+            greet();
             GCD.gcd();
         } else if (numOfTheGame == 5) {
-            Greet.greet();
+            greet();
             Progression.progression();
         } else if (numOfTheGame == 6) {
-            Greet.greet();
+            greet();
             Prime.prime();
         } else {
             System.out.println("Leave the game...");
         }
+    }
+    public static void greet() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name?");
+        name = scanner.next();
+        System.out.println("Hello, " + name + "!");
     }
 }
