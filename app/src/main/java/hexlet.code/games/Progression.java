@@ -6,7 +6,7 @@ public class Progression {
     public static void progression() {
         var startMess = "What number is missing in the progression?";
         var random = new Random();
-        var gameData = new ArrayList<String>();
+        var gameData = new String[Engine.ROUNDS][Engine.ROUNDS];
         for (var i = 0; i < Engine.ROUNDS; i++) {
             var startOfProg = random.nextInt(100);
             var stepOfProg = random.nextInt(1, 11);
@@ -15,7 +15,9 @@ public class Progression {
             var answer = prog[hidden];
             prog[hidden] = "...";
             String finalProg = String.join(" ", prog);
-            gameData.add(finalProg + "_" + answer);
+            gameData[0][i] = finalProg;
+            gameData[1][i] = answer;
+
         }
         Engine.gameStart(startMess, gameData);
     }

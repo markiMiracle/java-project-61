@@ -8,14 +8,13 @@ import java.util.Scanner;
 public class Engine {
     public static final int ROUNDS = 3;
 
-    public static void gameStart(String startMess, List<String> gameData) {
+    public static void gameStart(String startMess, String[][] gameData) {
         System.out.println(startMess);
         Scanner sq = new Scanner(System.in);
         boolean index = true;
         for (var i = 0; i < Engine.ROUNDS; i++) {
-            var data = gameData.get(i).split("_");
-            var question = data[0];
-            var answer = data[1];
+            var question = gameData[0][i];
+            var answer = gameData[1][i];
             System.out.println("Question: " + question);
             var input = sq.next();
             if (input.equals(answer)) {

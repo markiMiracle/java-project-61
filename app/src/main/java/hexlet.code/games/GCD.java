@@ -4,16 +4,17 @@ import java.util.Random;
 public class GCD {
     public static void gcd() {
         var startMess = "Find the greatest common divisor of given numbers.";
-        var gameData = new ArrayList<String>();
+        var gameData = new String[Engine.ROUNDS][Engine.ROUNDS];
         Random random = new Random();
         for (var i = 0; i < Engine.ROUNDS; i++) {
             int firstNum = random.nextInt(1, 101);
             int secondNum = random.nextInt(1, 101);
-            gameData.add(firstNum + " " + secondNum + "_" + getDel(firstNum, secondNum));
+            gameData[0][i] = firstNum + " " + secondNum;
+            gameData[1][i] = Integer.toString(getGcd(firstNum, secondNum));
         }
         Engine.gameStart(startMess, gameData);
     }
-    public static Integer getDel(int firstNum, int secondNum) {
+    public static Integer getGcd(int firstNum, int secondNum) {
         var listOfDel1 = new ArrayList<Integer>();
         var listOfDel2 = new ArrayList<Integer>();
         int del = 1;

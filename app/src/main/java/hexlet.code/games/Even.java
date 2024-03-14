@@ -4,11 +4,12 @@ import java.util.ArrayList;
 public class Even {
     public static void even() {
         var startMess = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        var gameData = new ArrayList<String>();
+        var gameData = new String[Engine.ROUNDS][Engine.ROUNDS];
         for (var i = 0; i < Engine.ROUNDS; i++) {
             var question = (int) (Math.random() * 100);
             var expect = question % 2 == 0 ? "yes" : "no";
-            gameData.add(question + "_" + expect);
+            gameData[0][i] = Integer.toString(question);
+            gameData[1][i] = expect;
         }
         Engine.gameStart(startMess, gameData);
     }

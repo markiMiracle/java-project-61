@@ -7,11 +7,13 @@ import java.util.Random;
 public class Calc {
     public static void calc() {
         var startMess = "What is the result of the expression?";
-        List<String> gameData = new ArrayList<>();
+        String[][] gameData = new String[Engine.ROUNDS][Engine.ROUNDS];
         for (var i = 0; i < Engine.ROUNDS; i++) {
             var expr = expression();
-            gameData.add(expr.get(0) + "_" + expr.get(1));
+            gameData[0][i] = expr.get(0);
+            gameData[1][i] = expr.get(1);
         }
+
         Engine.gameStart(startMess, gameData);
     }
     public static List<String> expression() {
