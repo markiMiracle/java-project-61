@@ -8,25 +8,25 @@ This is my first education project on gitHub. Hope, you enjoy it!
 ###		 -GСD(in this game you need to find greatest common divisor)
 ###		 -Progression(in this game you need to find missing progression element)
 ###		 -Prime(in this game you need to answer the question whether the number is prime)
-## To setup this, run:
+## To setup this:
 
 ```bash
 make build
 ```
 
-## To run this, run: 
+## To run this: 
 
 ```bash
 make run
 ```
 
-## Run tests
+## Run tests:
 
 ```bash
 make test
 ```
 
-## Run checkstyle
+## Run checkstyle:
 
 ```bash
 make lint
