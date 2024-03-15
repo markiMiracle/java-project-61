@@ -1,10 +1,11 @@
-package hexlet.code.games;
+package hexlet_code.games;
 
-import java.util.ArrayList;
+import hexlet_code.Engine;
+
 public class Even {
     public static void even() {
         var startMess = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        var gameData = new String[Engine.ROUNDS][Engine.ROUNDS];
+        var gameData = new String[2][Engine.ROUNDS];
         for (var i = 0; i < Engine.ROUNDS; i++) {
             var question = (int) (Math.random() * 100);
             var expect = question % 2 == 0 ? "yes" : "no";

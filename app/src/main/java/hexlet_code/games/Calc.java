@@ -1,36 +1,37 @@
-package hexlet.code.games;
+package hexlet_code.games;
 
-import java.util.ArrayList;
+import hexlet_code.Engine;
+
 import java.util.List;
 import java.util.Random;
 
 public class Calc {
     public static void calc() {
         var startMess = "What is the result of the expression?";
-        String[][] gameData = new String[Engine.ROUNDS][Engine.ROUNDS];
+        String[][] gameData = new String[2][Engine.ROUNDS];
+        Random random = new Random();
         for (var i = 0; i < Engine.ROUNDS; i++) {
-            var expr = expression();
+            int numOfOper = random.nextInt(3);
+            int num1 = random.nextInt(100);
+            int num2 =  random.nextInt(100);
+            var expr = expression(numOfOper, num1, num2);
             gameData[0][i] = expr.get(0);
             gameData[1][i] = expr.get(1);
         }
 
         Engine.gameStart(startMess, gameData);
     }
-    public static List<String> expression() {
-        Random random = new Random();
-        int numOfOper = random.nextInt(3);
-        int oper1 = random.nextInt(100);
-        int oper2 =  random.nextInt(100);
+    public static List<String> expression(int numOfOper, int num1, int num2) {
         var question = "";
         var answer = "";
         if (numOfOper == 1) {
-            question = oper1 + " + " + oper2;
+            question = num1 + " + " + num2;
             answer = getAns(question);
         } else if (numOfOper == 2) {
-            question = oper1 + " - " + oper2;
+            question = num1 + " - " + num2;
             answer = getAns(question);
         } else {
-            question = oper1 + " * " + oper2;
+            question = num1 + " * " + num2;
             answer = getAns(question);
         }
         List<String> expr = List.of(question, answer);

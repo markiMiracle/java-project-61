@@ -1,8 +1,5 @@
-package hexlet.code.games;
+package hexlet_code;
 
-import hexlet.code.App;
-
-import java.util.List;
 import java.util.Scanner;
 
 public class Engine {
@@ -21,7 +18,7 @@ public class Engine {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + input + "' is wrong answer ;(. "
-                        + "Correct answer was " + "'" + answer + "'.\nLet's try again, " + App.name + ".");
+                        + "Correct answer was " + "'" + answer + "'.\nLet's try again, " + App.name + "!");
                 index = false;
                 break;
             }

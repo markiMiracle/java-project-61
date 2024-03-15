@@ -1,4 +1,4 @@
-package hexlet.code;
+package hexlet_code;
 import java.util.Scanner;
 public class Cli {
 

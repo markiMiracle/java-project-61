@@ -1,10 +1,10 @@
-package hexlet.code;
+package hexlet_code;
 
-import hexlet.code.games.GCD;
-import hexlet.code.games.Calc;
-import hexlet.code.games.Prime;
-import hexlet.code.games.Progression;
-import hexlet.code.games.Even;
+import hexlet_code.games.GCD;
+import hexlet_code.games.Calc;
+import hexlet_code.games.Prime;
+import hexlet_code.games.Progression;
+import hexlet_code.games.Even;
 
 import java.util.Scanner;
 
@@ -17,33 +17,24 @@ public class App {
         Scanner sc = new Scanner(System.in);
         var numOfTheGame = sc.nextInt();
         System.out.println("Your choice: " + numOfTheGame + "\n");
-        if (numOfTheGame == 1) {
-            greet();
-        } else if (numOfTheGame == 2) {
-            greet();
-            Even.even();
-        } else if (numOfTheGame == 3) {
-            greet();
-            Calc.calc();
-        } else if (numOfTheGame == 4) {
-            greet();
-            GCD.gcd();
-        } else if (numOfTheGame == 5) {
-            greet();
-            Progression.progression();
-        } else if (numOfTheGame == 6) {
-            greet();
-            Prime.prime();
-        } else {
+        if (numOfTheGame == 0) {
             System.out.println("Leave the game...");
+            System.exit(0);
         }
-    }
-    public static void greet() {
-        Scanner scanner = new Scanner(System.in);
-
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name?");
-        name = scanner.next();
+        name = sc.next();
         System.out.println("Hello, " + name + "!");
+        if (numOfTheGame == 2) {
+            Even.even();
+        } else if (numOfTheGame == 3) {
+            Calc.calc();
+        } else if (numOfTheGame == 4) {
+            GCD.gcd();
+        } else if (numOfTheGame == 5) {
+            Progression.progression();
+        } else if (numOfTheGame == 6) {
+            Prime.prime();
+        }
     }
 }

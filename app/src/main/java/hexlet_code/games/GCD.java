@@ -1,10 +1,12 @@
-package hexlet.code.games;
+package hexlet_code.games;
+import hexlet_code.Engine;
+
 import java.util.ArrayList;
 import java.util.Random;
 public class GCD {
     public static void gcd() {
         var startMess = "Find the greatest common divisor of given numbers.";
-        var gameData = new String[Engine.ROUNDS][Engine.ROUNDS];
+        var gameData = new String[2][Engine.ROUNDS];
         Random random = new Random();
         for (var i = 0; i < Engine.ROUNDS; i++) {
             int firstNum = random.nextInt(1, 101);
