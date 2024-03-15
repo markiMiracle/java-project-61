@@ -43,6 +43,3 @@ make lint
 `      asciinema Prime - [Prime](https://asciinema.org/a/qeJBDy2i1vMmpazkzFXSdgFTq)
        
 `      asciinema Progression - [Progression](https://asciinema.org/a/RwUIXsR9mdoDYiBSEnpdMCJPX)
-
-       
-```
