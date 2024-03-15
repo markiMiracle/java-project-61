@@ -33,9 +33,9 @@ make lint
    
 ## Asciinema:
 
-       asciinema Even - [https://asciinema.org/connect/333c0920-8c65-4799-b79e-0ac8782264a9](https://www.example.com)
-       asciinema Calc - [https://asciinema.org/a/wgoQnO1HNTPLQ6hr3rA4jBVSm](https://www.example.com)
-       asciinema GCD - [https://asciinema.org/a/gF52FlwruD4LpFNHHwJcsrLs8](https://www.example.com)
-       asciinema Prime - [https://asciinema.org/a/qeJBDy2i1vMmpazkzFXSdgFTq](https://www.example.com)
-       asciinema Progression - [https://asciinema.org/a/RwUIXsR9mdoDYiBSEnpdMCJPX](https://www.example.com)
+       asciinema Even - https://asciinema.org/connect/333c0920-8c65-4799-b79e-0ac8782264a9(https://www.example.com)
+       asciinema Calc - https://asciinema.org/a/wgoQnO1HNTPLQ6hr3rA4jBVSm(https://www.example.com)
+       asciinema GCD - https://asciinema.org/a/gF52FlwruD4LpFNHHwJcsrLs8(https://www.example.com)
+       asciinema Prime - https://asciinema.org/a/qeJBDy2i1vMmpazkzFXSdgFTq(https://www.example.com)
+       asciinema Progression - https://asciinema.org/a/RwUIXsR9mdoDYiBSEnpdMCJPX(https://www.example.com)
 
