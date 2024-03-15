@@ -1,13 +1,13 @@
 This is my first education project on gitHub. Hope, you enjoy it!
 
-			# BrainGames
+#			 BrainGames
 	
-	## This project includes 5 mini games: 
-		### -Even(in this game you need to answer the question whether the number is even)
-		### -Calc(hope, you don't forgot the Math :) )
-		### -GСD(in this game you need to find greatest common divisor)
-		### -Progression(in this game you need to find missing progression element)
-		### -Prime(in this game you need to answer the question whether the number is prime)
+## 	This project includes 5 mini games: 
+###		 -Even(in this game you need to answer the question whether the number is even)
+###		 -Calc(hope, you don't forgot the Math :) )
+###		 -GСD(in this game you need to find greatest common divisor)
+###		 -Progression(in this game you need to find missing progression element)
+###		 -Prime(in this game you need to answer the question whether the number is prime)
 ## Setup
 
 ```bash
