@@ -1,5 +1,5 @@
-package hexlet_code.games;
-import hexlet_code.Engine;
+package hexlet.code.games;
+import hexlet.code.Engine;
 
 import java.util.Random;
 

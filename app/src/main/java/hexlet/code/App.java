@@ -1,10 +1,10 @@
-package hexlet_code;
+package hexlet.code;
 
-import hexlet_code.games.GCD;
-import hexlet_code.games.Calc;
-import hexlet_code.games.Prime;
-import hexlet_code.games.Progression;
-import hexlet_code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Even;
 
 import java.util.Scanner;
 
