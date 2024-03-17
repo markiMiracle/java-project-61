@@ -14,7 +14,7 @@ public class Progression {
             var hidden = random.nextInt(1, 11);
             var prog = makeProgression(startOfProg, stepOfProg);
             var answer = prog[hidden];
-            prog[hidden] = "...";
+            prog[hidden] = "..";
             String finalProg = String.join(" ", prog);
             gameData[0][i] = finalProg;
             gameData[1][i] = answer;
