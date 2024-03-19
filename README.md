@@ -8,6 +8,11 @@ This is my first education project on gitHub. Hope, you enjoy it!
 ###		 -GСD(in this game you need to find greatest common divisor)
 ###		 -Progression(in this game you need to find missing progression element)
 ###		 -Prime(in this game you need to answer the question whether the number is prime)
+
+
+### Hexlet tests and linter status:
+[![Actions Status](https://github.com/markiMiracle/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/markiMiracle/java-project-61/actions)
+
 ## To setup this:
 
 ```bash
