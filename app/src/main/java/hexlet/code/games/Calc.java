@@ -10,9 +10,13 @@ public class Calc {
         var startMess = "What is the result of the expression?";
         String[][] gameData = new String[2][Engine.ROUNDS];
         for (var i = 0; i < Engine.ROUNDS; i++) {
-            int numOfOper = Utils.generateNumber(0, 2);
-            int num1 = Utils.generateNumber(1, 100);
-            int num2 =  Utils.generateNumber(1, 100);
+            var minNumOfOper = 0;
+            var maxNumOfOper = 2;
+            var min = 1;
+            var max = 100;
+            int numOfOper = Utils.generateNumber(minNumOfOper, maxNumOfOper);
+            int num1 = Utils.generateNumber(min, max);
+            int num2 =  Utils.generateNumber(min, max);
             var expr = expression(numOfOper, num1, num2);
             gameData[0][i] = expr.get(0);
             gameData[1][i] = expr.get(1);
