@@ -7,10 +7,8 @@ public class GCD {
         var startMess = "Find the greatest common divisor of given numbers.";
         var gameData = new String[2][Engine.ROUNDS];
         for (var i = 0; i < Engine.ROUNDS; i++) {
-            var min = 1;
-            var max = 100;
-            int firstNum = Utils.generateNumber(min, max);
-            int secondNum = Utils.generateNumber(min, max);
+            int firstNum = Utils.generateNumber();
+            int secondNum = Utils.generateNumber();
             gameData[0][i] = firstNum + " " + secondNum;
             gameData[1][i] = Integer.toString(gcd(firstNum, secondNum));
         }

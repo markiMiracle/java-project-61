@@ -10,13 +10,9 @@ public class Calc {
         var startMess = "What is the result of the expression?";
         String[][] gameData = new String[2][Engine.ROUNDS];
         for (var i = 0; i < Engine.ROUNDS; i++) {
-            var minNumOfOper = 0;
-            var maxNumOfOper = 2;
-            var min = 1;
-            var max = 100;
-            int numOfOper = Utils.generateNumber(minNumOfOper, maxNumOfOper);
-            int num1 = Utils.generateNumber(min, max);
-            int num2 =  Utils.generateNumber(min, max);
+            int numOfOper = Utils.generateNumber(0, 2);
+            int num1 = Utils.generateNumber();
+            int num2 = Utils.generateNumber();
             var expr = expression(numOfOper, num1, num2);
             gameData[0][i] = expr.get(0);
             gameData[1][i] = expr.get(1);
@@ -35,8 +31,7 @@ public class Calc {
             question = num1 + " * " + num2;
         }
         answer = Integer.toString(calculate(question));
-        List<String> expr = List.of(question, answer);
-        return expr;
+        return List.of(question, answer);
     }
     public static Integer calculate(String question) {
         if (question.contains("+")) {

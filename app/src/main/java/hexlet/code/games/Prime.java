@@ -8,9 +8,7 @@ public class Prime {
         var startMess = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         var gameData = new String[2][Engine.ROUNDS];
         for (var i = 0; i < Engine.ROUNDS; i++) {
-            var min = 2;
-            var max = 182;
-            var number = Utils.generateNumber(min, max);
+            var number = Utils.generateNumber();
             gameData[0][i] = Integer.toString(number);
             if (isPrime(number)) {
                 gameData[1][i] = "yes";
@@ -35,8 +33,6 @@ public class Prime {
                 }
             }
         }
-
-        return listOfDel.size() == 1;
+        return listOfDel.size() == 1 && (num != 1);
     }
-
 }
