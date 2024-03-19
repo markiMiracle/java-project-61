@@ -28,4 +28,7 @@ public class Engine {
         }
         sq.close();
     }
+
+    public static class Utils {
+    }
 }

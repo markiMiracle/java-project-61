@@ -9,7 +9,7 @@ import hexlet.code.games.Even;
 import java.util.Scanner;
 
 public class App {
-    public static String name;
+    public static String name = "name";
 
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.\n1 - Greet\n2 - Even\n"
@@ -25,12 +25,13 @@ public class App {
         System.out.println("May I have your name?");
         name = sc.next();
         System.out.println("Hello, " + name + "!");
+
         if (numOfTheGame == 2) {
             Even.even();
         } else if (numOfTheGame == 3) {
             Calc.calc();
         } else if (numOfTheGame == 4) {
-            GCD.gcd();
+            GCD.gcdGame();
         } else if (numOfTheGame == 5) {
             Progression.progression();
         } else if (numOfTheGame == 6) {
