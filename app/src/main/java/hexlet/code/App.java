@@ -18,6 +18,11 @@ public class App {
         if (numOfTheGame == 0) {
             System.out.println("Leave the game...");
             System.exit(0);
+        } else if (numOfTheGame == 1) {
+            System.out.println("Welcome to the Brain Games!");
+            System.out.println("May I have your name?");
+            var name = sc.next();
+            System.out.println("Hello, " + name + "!");
         } else if (numOfTheGame == 2) {
             Even.even();
         } else if (numOfTheGame == 3) {
