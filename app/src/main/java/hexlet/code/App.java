@@ -10,28 +10,41 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("Please enter the game number and press Enter.\n1 - Greet\n2 - Even\n"
-                    + "3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
+        final int exitNumber = 0;
+        final int greetNumber = 1;
+        final int evenNumber = 2;
+        final int calcNumber = 3;
+        final int gcdNumber = 4;
+        final int progressionNumber = 5;
+        final int primeNumber = 6;
+        System.out.println("Please enter the game number and press Enter.");
+        System.out.println("1 - Greet");
+        System.out.println("2 - Even");
+        System.out.println("3 - Calc");
+        System.out.println("4 - GCD");
+        System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
+        System.out.println("0 - Exit");
         Scanner sc = new Scanner(System.in);
         var numOfTheGame = sc.nextInt();
         System.out.println("Your choice: " + numOfTheGame + "\n");
-        if (numOfTheGame == 0) {
+        if (numOfTheGame == exitNumber) {
             System.out.println("Leave the game...");
             System.exit(0);
-        } else if (numOfTheGame == 1) {
+        } else if (numOfTheGame == greetNumber) {
             System.out.println("Welcome to the Brain Games!");
             System.out.println("May I have your name?");
             var name = sc.next();
             System.out.println("Hello, " + name + "!");
-        } else if (numOfTheGame == 2) {
+        } else if (numOfTheGame == evenNumber) {
             Even.even();
-        } else if (numOfTheGame == 3) {
+        } else if (numOfTheGame == calcNumber) {
             Calc.calc();
-        } else if (numOfTheGame == 4) {
+        } else if (numOfTheGame == gcdNumber) {
             GCD.gcdGame();
-        } else if (numOfTheGame == 5) {
+        } else if (numOfTheGame == progressionNumber) {
             Progression.progression();
-        } else if (numOfTheGame == 6) {
+        } else if (numOfTheGame == primeNumber) {
             Prime.prime();
         }
     }

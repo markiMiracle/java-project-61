@@ -2,37 +2,28 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.util.ArrayList;
 public class Prime {
     public static void prime() {
+        final int minNumber = 1;
+        final int maxNumber = 100;
         var startMess = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         var gameData = new String[2][Engine.ROUNDS];
         for (var i = 0; i < Engine.ROUNDS; i++) {
-            var number = Utils.generateNumber();
+            var number = Utils.generateNumber(minNumber, maxNumber);
             gameData[0][i] = Integer.toString(number);
-            if (isPrime(number)) {
-                gameData[1][i] = "yes";
-            } else {
-                gameData[1][i] = "no";
-            }
+            gameData[1][i] = isPrime(number) ? "yes" : "no";
         }
         Engine.gameStart(startMess, gameData);
     }
-    public static boolean isPrime(int num) {
-        var listOfDel = new ArrayList<Integer>();
-        if (num > 1) {
-            for (var i = 1; i < num; i++) {
-                if (num % i == 0) {
-                    listOfDel.add(i);
-                }
-            }
-        } else {
-            for (var i = -1; i > num; i--) {
-                if (num % i == 0) {
-                    listOfDel.add(i);
-                }
+    private static boolean isPrime(int number) {
+        if (number < 2) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(number); i += 1) {
+            if (number % i == 0) {
+                return false;
             }
         }
-        return listOfDel.size() == 1 && (num != 1);
+        return true;
     }
 }
