@@ -32,7 +32,7 @@ public class Progression {
     private static String[] makeProgression(int startOfProgression, int stepOfProgression, int progressionLength) {
         String[] progression = new String[progressionLength];
         progression[0] = Integer.toString(startOfProgression);
-        for (var i = 1; i < progressionLength - 1; i++) {
+        for (var i = 1; i < progressionLength; i++) {
             startOfProgression += stepOfProgression;
             progression[i] = Integer.toString(startOfProgression);
         }
