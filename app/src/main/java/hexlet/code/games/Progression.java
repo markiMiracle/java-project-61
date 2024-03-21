@@ -2,8 +2,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.util.Random;
-
 public class Progression {
     public static void progression() {
         final int minNumber = 1;
@@ -15,7 +13,6 @@ public class Progression {
         final int minHiddenIndex = 0;
         final int maxHiddenIndex = maxProgressionLength - 1;
         var startMess = "What number is missing in the progression?";
-        var random = new Random();
         var gameData = new String[2][Engine.ROUNDS];
         for (var i = 0; i < Engine.ROUNDS; i++) {
             var progressionLength = Utils.generateNumber(minProgressionLength, maxProgressionLength);
@@ -35,8 +32,7 @@ public class Progression {
     private static String[] makeProgression(int startOfProg, int stepOfProg, int progressionLength) {
         String[] progression = new String[progressionLength];
         progression[0] = Integer.toString(startOfProg);
-        String answer = "";
-        for (var i = 1; i < progressionLength; i++) {
+        for (var i = 1; i < progressionLength - 1; i++) {
             startOfProg += stepOfProg;
             progression[i] = Integer.toString(startOfProg);
         }

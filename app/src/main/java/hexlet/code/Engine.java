@@ -12,7 +12,6 @@ public class Engine {
         var name = sc.next();
         System.out.println("Hello, " + name + "!");
         System.out.println(startMess);
-        boolean index = true;
         for (var i = 0; i < Engine.ROUNDS; i++) {
             var question = gameData[0][i];
             var answer = gameData[1][i];
@@ -23,16 +22,10 @@ public class Engine {
             } else {
                 System.out.println("'" + input + "' is wrong answer ;(. "
                         + "Correct answer was " + "'" + answer + "'.\nLet's try again, " + name + "!");
-                index = false;
-                break;
+                return;
             }
         }
-        if (index) {
-            System.out.println("Congratulations, " + name + "!");
-        }
+        System.out.println("Congratulations, " + name + "!");
         sc.close();
-    }
-
-    public static class Utils {
     }
 }
