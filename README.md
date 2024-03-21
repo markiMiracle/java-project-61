@@ -1,3 +1,6 @@
+### Hexlet tests and linter status:
+[![Actions Status](https://github.com/markiMiracle/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/markiMiracle/java-project-61/actions)
+
 This is my first education project on gitHub. Hope, you enjoy it!
 
 #			 BrainGames
@@ -10,8 +13,6 @@ This is my first education project on gitHub. Hope, you enjoy it!
 ###		 -Prime(in this game you need to answer the question whether the number is prime)
 
 
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/markiMiracle/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/markiMiracle/java-project-61/actions)
 
 ## To setup this:
 
