@@ -46,6 +46,8 @@ public class App {
             Progression.progression();
         } else if (numOfTheGame == primeNumber) {
             Prime.prime();
+        } else {
+            throw new RuntimeException("Unknown game number: " + "\'" + numOfTheGame + "\'");
         }
     }
 }

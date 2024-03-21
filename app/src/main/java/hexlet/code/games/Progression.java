@@ -11,30 +11,30 @@ public class Progression {
         final int minProgressionLength = 6;
         final int maxProgressionLength = 10;
         final int minHiddenIndex = 0;
-        final int maxHiddenIndex = maxProgressionLength - 1;
         var startMess = "What number is missing in the progression?";
         var gameData = new String[2][Engine.ROUNDS];
         for (var i = 0; i < Engine.ROUNDS; i++) {
             var progressionLength = Utils.generateNumber(minProgressionLength, maxProgressionLength);
-            var startOfProg = Utils.generateNumber(minNumber, maxNumber);
-            var stepOfProg = Utils.generateNumber(minStep, maxStep);
+            var startOfProgression = Utils.generateNumber(minNumber, maxNumber);
+            var stepOfProgression = Utils.generateNumber(minStep, maxStep);
+            final int maxHiddenIndex = progressionLength - 1;
             var hidden = Utils.generateNumber(minHiddenIndex, maxHiddenIndex);
-            var prog = makeProgression(startOfProg, stepOfProg, progressionLength);
-            var answer = prog[hidden];
-            prog[hidden] = "..";
-            String finalProg = String.join(" ", prog);
+            var progression = makeProgression(startOfProgression, stepOfProgression, progressionLength);
+            var answer = progression[hidden];
+            progression[hidden] = "..";
+            String finalProg = String.join(" ", progression);
             gameData[0][i] = finalProg;
             gameData[1][i] = answer;
 
         }
         Engine.gameStart(startMess, gameData);
     }
-    private static String[] makeProgression(int startOfProg, int stepOfProg, int progressionLength) {
+    private static String[] makeProgression(int startOfProgression, int stepOfProgression, int progressionLength) {
         String[] progression = new String[progressionLength];
-        progression[0] = Integer.toString(startOfProg);
+        progression[0] = Integer.toString(startOfProgression);
         for (var i = 1; i < progressionLength - 1; i++) {
-            startOfProg += stepOfProg;
-            progression[i] = Integer.toString(startOfProg);
+            startOfProgression += stepOfProgression;
+            progression[i] = Integer.toString(startOfProgression);
         }
         return progression;
     }
