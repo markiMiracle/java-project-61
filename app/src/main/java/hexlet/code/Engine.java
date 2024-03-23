@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class Engine {
     public static final int ROUNDS = 3;
 
-    public static void gameStart(String startMess, String[][] gameData) {
+    public static void gameStart(String startMessage, String[][] gameData) {
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name?");
         Scanner sc = new Scanner(System.in);
         var name = sc.next();
         System.out.println("Hello, " + name + "!");
-        System.out.println(startMess);
+        System.out.println(startMessage);
         for (var i = 0; i < Engine.ROUNDS; i++) {
             var question = gameData[0][i];
             var answer = gameData[1][i];

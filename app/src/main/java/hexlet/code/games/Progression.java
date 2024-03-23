@@ -11,7 +11,7 @@ public class Progression {
         final int minProgressionLength = 6;
         final int maxProgressionLength = 10;
         final int minHiddenIndex = 0;
-        var startMess = "What number is missing in the progression?";
+        var startMessage = "What number is missing in the progression?";
         var gameData = new String[2][Engine.ROUNDS];
         for (var i = 0; i < Engine.ROUNDS; i++) {
             var progressionLength = Utils.generateNumber(minProgressionLength, maxProgressionLength);
@@ -22,12 +22,12 @@ public class Progression {
             var progression = makeProgression(startOfProgression, stepOfProgression, progressionLength);
             var answer = progression[hidden];
             progression[hidden] = "..";
-            String finalProg = String.join(" ", progression);
-            gameData[0][i] = finalProg;
+            String finalProgression = String.join(" ", progression);
+            gameData[0][i] = finalProgression;
             gameData[1][i] = answer;
 
         }
-        Engine.gameStart(startMess, gameData);
+        Engine.gameStart(startMessage, gameData);
     }
     private static String[] makeProgression(int startOfProgression, int stepOfProgression, int progressionLength) {
         String[] progression = new String[progressionLength];

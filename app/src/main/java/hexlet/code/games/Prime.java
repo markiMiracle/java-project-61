@@ -6,14 +6,14 @@ public class Prime {
     public static void prime() {
         final int minNumber = 1;
         final int maxNumber = 100;
-        var startMess = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        var startMessage = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         var gameData = new String[2][Engine.ROUNDS];
         for (var i = 0; i < Engine.ROUNDS; i++) {
             var number = Utils.generateNumber(minNumber, maxNumber);
             gameData[0][i] = Integer.toString(number);
             gameData[1][i] = isPrime(number) ? "yes" : "no";
         }
-        Engine.gameStart(startMess, gameData);
+        Engine.gameStart(startMessage, gameData);
     }
     private static boolean isPrime(int number) {
         if (number < 2) {
